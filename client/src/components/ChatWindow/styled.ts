@@ -20,3 +20,24 @@ export const Input = styled('input')({
   border: '1px solid #ccc',
   marginBottom: '1rem',
 });
+
+export const Button = styled('button')({
+  padding: '0.75rem 1.5rem',
+  fontSize: '1rem',
+  borderRadius: '8px',
+  border: 'none',
+  backgroundColor: '#1976d2',
+  color: 'white',
+  cursor: 'pointer',
+  marginTop: '0.5rem',
+  transition: 'background-color 0.2s ease-in-out',
+
+  '&:hover': {
+    backgroundColor: '#1565c0',
+  },
+
+  '&:disabled': {
+    backgroundColor: '#90caf9',
+    cursor: 'not-allowed',
+  },
+});
