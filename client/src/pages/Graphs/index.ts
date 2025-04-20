@@ -1,3 +1,3 @@
-import Graphs from './Graphs';
+import Graphs from './Graphs.tsx';
 
 export default Graphs;
