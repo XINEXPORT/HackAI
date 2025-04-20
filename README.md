@@ -1,4 +1,7 @@
-# HackAI
+# HackAI - F.A.S.T.
+<a href="https://main.d20hoy1790z51.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
+  Visit F.A.S.T. Here
+</a>
 
 ## Business Objective
 
@@ -22,6 +25,7 @@ AI/ML Technologies:
 Backend Development:
     FastAPI
     Vite
+    AWS Amplify
 
 External APIs:
     OpenAI
