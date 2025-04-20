@@ -4,7 +4,7 @@ import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-from .utils import get_embedding, cosine_search
+from utils import get_embedding, cosine_search
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS so React can talk to Flask

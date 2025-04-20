@@ -11,3 +11,4 @@ pdfplumber
 pytesseract
 scikit-learn
 tqdm
+Gunicorn
