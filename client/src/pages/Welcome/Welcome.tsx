@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FullSizeCentered } from '@/components/styled';
 import useOrientation from '@/hooks/useOrientation';
+import { Image } from './styled';
 
 function Welcome() {
   const isPortrait = useOrientation();
@@ -34,13 +35,21 @@ function Welcome() {
     fetchOpenAI();
   }, []);
 
+  const width = isPortrait ? '40%' : '30%';
+  const height = isPortrait ? '30%' : '40%';
+
   return (
     <>
       <meta name="title" content="Welcome" />
       <FullSizeCentered flexDirection={isPortrait ? 'column' : 'row'}>
-        <div style={{ color: 'white', fontSize: '1.5rem', textAlign: 'center' }}>
-          {message || 'Loading...'}
-        </div>
+        {message ? (
+          <div style={{ color: 'white', fontSize: '1.5rem', textAlign: 'center' }}>
+            {message}
+          </div>
+        ) : (
+          <>
+          </>
+        )}
       </FullSizeCentered>
     </>
   );
