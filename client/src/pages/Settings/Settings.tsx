@@ -1,15 +1,13 @@
 import { Link } from 'react-router';
-
 import { Button, Typography } from '@mui/material';
-
 import { FullSizeCentered } from '@/components/styled';
 
-function Page4() {
+function Settings() {
   return (
     <>
-      <meta name="title" content="Page 4" />
+      <meta name="title" content="Settings" />
       <FullSizeCentered>
-        <Typography variant="h3">Page 4</Typography>
+        <Typography variant="h3">Settings</Typography>
         <Button
           to={`/${Math.random().toString()}`}
           component={Link}
@@ -18,11 +16,11 @@ function Page4() {
           size="small"
           color="warning"
         >
-          Whant to check 404?
+          Want to check 404?
         </Button>
       </FullSizeCentered>
     </>
   );
 }
 
-export default Page4;
+export default Settings;
