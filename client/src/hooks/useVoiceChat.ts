@@ -1,6 +1,16 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { useConversation } from '@11labs/react';
-import { ConversationHookProps, ConversationSessionProps, VolumeProps, Message } from '../types';
+import {
+  ConversationHookProps,
+  ConversationSessionProps,
+  VolumeProps,
+  Message
+} from '../types';
+
+interface IncomingMessage {
+  source: 'user' | 'ai';
+  message: string;
+}
 
 export const useVoiceChat = (props: ConversationHookProps = {}) => {
   const [isConnected, setIsConnected] = useState<boolean>(false);
@@ -8,7 +18,7 @@ export const useVoiceChat = (props: ConversationHookProps = {}) => {
   const [conversationId, setConversationId] = useState<string | null>(null);
   const [volume, setVolume] = useState<number>(7);
   const [messages, setMessages] = useState<Message[]>([]);
-  
+
   const conversation = useConversation({
     onConnect: () => {
       console.log('Connected to Eleven Labs');
@@ -21,9 +31,9 @@ export const useVoiceChat = (props: ConversationHookProps = {}) => {
       setConversationId(null);
       props.onDisconnect?.();
     },
-    onMessage: (message) => {
+    onMessage: (message: IncomingMessage) => {
       console.log('Message received:', message);
-      
+
       if (message.source === 'user') {
         setMessages(prevMessages => [
           ...prevMessages,
@@ -43,10 +53,10 @@ export const useVoiceChat = (props: ConversationHookProps = {}) => {
           }
         ]);
       }
-      
+
       props.onMessage?.(message);
     },
-    onError: (error) => {
+    onError: (error: unknown) => {
       console.error('Conversation error:', error);
       props.onError?.(error);
     }
@@ -84,10 +94,10 @@ export const useVoiceChat = (props: ConversationHookProps = {}) => {
       const id = await conversation.startSession({
         agentId: sessionProps.agentId
       });
-      
+
       setConversationId(id);
       console.log('Conversation started with ID:', id);
-      
+
       sessionProps.onStart?.();
     } catch (error) {
       console.error('Failed to start conversation:', error);
@@ -128,7 +138,7 @@ export const useVoiceChat = (props: ConversationHookProps = {}) => {
     status,
     isSpeaking,
     messages,
-    
+
     startConversation,
     endConversation,
     handleVolumeChange,
