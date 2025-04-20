@@ -21,10 +21,10 @@ AI/ML Technologies:
 
 Backend Development:
     FastAPI
-    Vite: A fast web application build tool that allows for rapid development
+    Vite
 
 External APIs:
-    OpenAI: OpenAI is integrated in the Conversation and Patient Information screens
+    OpenAI
 ```
 
 ## Contributors
