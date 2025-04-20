@@ -8,12 +8,20 @@ function Welcome() {
 
   useEffect(() => {
     async function fetchOpenAI() {
+      const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
+      if (!apiKey) {
+        console.warn('VITE_OPENAI_API_KEY is not defined.');
+        setMessage('API key is missing. Please check your environment config.');
+        return;
+      }
+
       try {
         const response = await fetch('https://api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
+            Authorization: `Bearer ${apiKey}`
           },
           body: JSON.stringify({
             model: 'gpt-4',
