@@ -1,8 +1,6 @@
 import { Fragment } from 'react';
 import { BrowserRouter } from 'react-router';
-
 import { CssBaseline } from '@mui/material';
-
 import { withErrorHandler } from '@/error-handling';
 import AppErrorBoundaryFallback from '@/error-handling/fallbacks/App';
 

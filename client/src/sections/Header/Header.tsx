@@ -2,14 +2,11 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ThemeIcon from '@mui/icons-material/InvertColors';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Button, Divider, IconButton, Stack, Toolbar, Tooltip } from '@mui/material';
-
 import { useNotifications } from '@toolpad/core/useNotifications';
-
 import { repository, title } from '@/config';
 import { useHotKeysDialog } from '@/sections/HotKeys/hooks';
 import { useSidebar } from '@/sections/Sidebar/hooks';
 import { useThemeMode } from '@/theme';
-
 import { HotKeysButton } from './styled';
 import { getRandomJoke } from './utils';
 

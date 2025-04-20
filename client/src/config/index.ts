@@ -1,8 +1,8 @@
-const title = 'React PWA';
+const title = 'F.A.S.T. Advisor';
 
-const email = 'auther-email@gmail.com';
+const email = 'info@fastadvisor.com';
 
-const repository = 'https://github.com/suren-atoyan/react-pwa';
+const repository = 'https://github.com/XINEXPORT/HackAI';
 
 const dateFormat = 'MMMM DD, YYYY';
 
@@ -14,7 +14,7 @@ const loader = {
 
 const defaultMetaTags = {
   image: '/cover.png',
-  description: 'Starter kit for modern web applications',
+  description: 'FAST Advisor App',
 };
 
 export { loader, dateFormat, repository, email, title, defaultMetaTags };

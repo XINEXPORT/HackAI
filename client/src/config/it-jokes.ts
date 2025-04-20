@@ -1,16 +1,16 @@
-// Random IT joks :)
+// Random Finance jokes :)
 
 const jokes: string[] = [
-  'I changed my password to "incorrect". So whenever I forget what it is the computer will say "Your password is incorrect"',
-  'Moses had the first tablet that could connect to the cloud',
-  'A clean house is the sign of a broken computer',
-  "Why do Java developers wear glasses? Because they don't C#",
-  'The first computer dates back to Adam and Eve. It was an Apple with limited memory, just one byte. And then everything crashed',
-  'Why are PCs like air conditioners? They stop working properly if you open Windows!',
-  'What did the turkey say to the computer? Google, google, google!',
-  'There are 10 types of people in this world, those who understand binary and those who dont',
-  "OOP sucks and this one isn't a joke",
-  'What did the robot say to the dead robot? Rust-in-peace',
+  "Why did the banker switch careers? He lost interest.",
+  "Why don’t stock market experts ever read novels? Because the only numbers in them are page numbers.",
+  "What’s the difference between a pigeon and an investment banker? The pigeon can still make a deposit on a BMW.",
+  "Why did the accountant break up with the calculator? He felt like he was being used.",
+  "My credit score is so low, I had to get a co-signer for my Netflix account.",
+  "Why did the dollar bill break up with the euro? It felt undervalued.",
+  "Budgeting tip: If you can't afford it, don't worry—just finance it, forget about it, and panic later!",
+  "Economists have predicted nine out of the last five recessions.",
+  "Why was the financial advisor always calm? He had lots of *liquid* assets.",
+  "My investment strategy is simple: buy high, sell low, then blame the market.",
 ];
 
 export default jokes;
