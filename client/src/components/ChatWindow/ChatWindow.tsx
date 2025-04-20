@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Input, Message, Button } from './styled';
+import { Container, Input, Message} from './styled';
 
 type AIResponse = {
   text: string;
@@ -97,34 +97,32 @@ const ChatWindow = () => {
       </form>
 
       {loading ? (
-        <Message>Thinking...</Message>
-      ) : aiResponse ? (
-        <>
-          <Message>{aiResponse.text}</Message>
+  <Message>Thinking...</Message>
+) : aiResponse ? (
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '2rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+    {/* Image left */}
+    {aiResponse.media?.length ? (
+      <img
+        src={aiResponse.media[0]}
+        alt="AI generated"
+        style={{
+          width: '350px',
+          height: '350px',
+          objectFit: 'cover',
+          borderRadius: '8px',
+          boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)'
+        }}
+      />
+    ) : null}
 
-          {aiResponse.media?.length ? (
-            aiResponse.media.map((url, index) => (
-              <img
-                key={index}
-                src={url}
-                alt={`AI generated ${index + 1}`}
-                style={{
-                  maxWidth: '400px',
-                  marginTop: '1rem',
-                  borderRadius: '8px',
-                  boxShadow: '0 0 10px rgba(255, 255, 255, 0.2)',
-                }}
-              />
-            ))
-          ) : (
-            <Message style={{ fontSize: '0.9rem', opacity: 0.7 }}>
-              (No image was generated.)
-            </Message>
-          )}
-        </>
-      ) : (
-        <Message>Try asking something!</Message>
-      )}
+    {/* Text right */}
+    <Message style={{ maxWidth: '600px', textAlign: 'left' }}>
+      {aiResponse.text}
+    </Message>
+  </div>
+) : (
+  <Message>Try asking something!</Message>
+)}
     </Container>
   );
 };
