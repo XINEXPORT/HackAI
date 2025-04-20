@@ -9,7 +9,7 @@ function getRandomJoke() {
   return (
     <Stack gap={0.5}>
       <Typography variant="body1" fontWeight={900}>
-        Notification demo (random IT jokes)
+        Notification demo (random finance jokes)
       </Typography>
       <Typography variant="body1">{randomJoke}</Typography>
     </Stack>
