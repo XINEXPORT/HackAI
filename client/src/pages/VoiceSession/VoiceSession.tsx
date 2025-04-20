@@ -1,15 +1,15 @@
-import { Typography } from '@mui/material';
 import { FullSizeCentered } from '@/components/styled';
+import VoiceChatApp from '../../components/VoiceChat/VoiceChatApp';
 
-function Graphs() {
+function VoiceSession() {
   return (
     <>
       <meta name="title" content="Graphs" />
       <FullSizeCentered>
-        <Typography variant="h3">Graphs</Typography>
+        <VoiceChatApp/>
       </FullSizeCentered>
     </>
   );
 }
 
-export default Graphs;
+export default VoiceSession;

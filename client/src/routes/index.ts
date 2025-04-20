@@ -28,9 +28,9 @@ const routes: Routes = [
     icon: AddTaskIcon,
   },
   {
-    component: asyncComponentLoader(() => import('@/pages/Graphs')),
-    path: '/Graphs',
-    title: 'Graphs',
+    component: asyncComponentLoader(() => import('@/pages/VoiceSession')),
+    path: '/VoiceSession',
+    title: 'Voice Session',
     icon: TerrainIcon,
   },
   {
