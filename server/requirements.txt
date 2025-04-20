@@ -1,0 +1,13 @@
+PyPDF2
+sentence-transformers
+openai
+matplotlib
+nltk
+Flask
+flask-cors
+python-dotenv
+pymupdf
+pdfplumber
+pytesseract
+scikit-learn
+tqdm
