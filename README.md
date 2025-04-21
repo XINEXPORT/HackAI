@@ -3,10 +3,6 @@
   Visit F.A.S.T. Here
 </a>
 
-## Business Objective
-
-## Value Proposal
-
 ## Technologies
 ```
 Frontend Development:
