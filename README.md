@@ -1,7 +1,4 @@
 # HackAI - F.A.S.T. Advisor
-<a href="https://main.d20hoy1790z51.amplifyapp.com/" target="_blank" rel="noopener noreferrer">
-  Visit F.A.S.T. Here
-</a>
 
 ## Technologies
 ```
